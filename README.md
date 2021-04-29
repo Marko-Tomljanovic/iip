@@ -15,7 +15,7 @@ Marko Tomljanović <markot@windowslive.com>
 
 University (coding) project for classes IIP
 [Fakultet informatike u Puli ](https://fipu.unipu.hr/)  
-[Kolegij: Izrada informatičkih projekata](http://ntankovic.unipu.hr/)  
+Kolegij: [Izrada informatičkih projekata](http://ntankovic.unipu.hr/)  
 Mentori: [doc. dr. sc. Nikola Tanković](https://ntankovic.unipu.hr/)
 
 ### Figma prototype

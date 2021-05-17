@@ -205,7 +205,7 @@ export default {
       alert(
         "Sa " +
           this.natocenoGorivo +
-          " kn se može prijeći " +
+          " l natočenog goriva se može prijeći " +
           rez.toFixed(2) +
           " Km"
       );
@@ -217,7 +217,7 @@ export default {
       alert(
         "Sa " +
           this.natocenoGorivoZaNovce +
-          " L može se prijeći " +
+          " kn natočenog goriva možete prijeći " +
           rez.toFixed(2) +
           " Km"
       );

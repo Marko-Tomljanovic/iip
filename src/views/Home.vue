@@ -4,6 +4,7 @@
       <b-col sm="3">
         <label>Predjeni kilomertri</label>
         <b-form-input
+          style="background-color: #b4c2ff;"
           class="my-2"
           type="number"
           :state="nameState1"
@@ -17,6 +18,7 @@
       <b-col sm="2">
         <label>Potrošnja auta</label>
         <b-form-input
+          style="background-color: #d1ff66;"
           class="my-2"
           type="number"
           :state="nameState2"
@@ -29,6 +31,7 @@
       <b-col sm="2">
         <label>Cijena 1 goriva</label>
         <b-form-input
+          style="background-color: #ffc14f;"
           class="my-2"
           type="number"
           :state="nameState3"
@@ -41,6 +44,7 @@
       <b-col sm="2">
         <label>Natočeno goriva</label>
         <b-form-input
+          style="background-color: #f2a7fc;"
           class="my-2"
           type="number"
           :state="nameState4"
@@ -53,6 +57,7 @@
       <b-col sm="3">
         <label>Natočeno goriva za novce</label>
         <b-form-input
+          style="background-color: #d3d3d3;"
           class="my-2"
           type="number"
           :state="nameState5"
@@ -63,49 +68,124 @@
         ></b-form-input>
       </b-col>
 
-      <b-col class="my-3">
-        <div>
-          <b-button :disabled="pokazi1" @click="izracunGorivaPremaKilometrima()"
-            >Izracun Goriva Prema Kilometrima!</b-button
-          >
-        </div>
-        <br />
-        <b-button
-          :disabled="pokazi2"
-          @click="izracunCijeneGorivaPremaKilometrima()"
-          >Izracun Cijene Goriva Prema Kilometrima!</b-button
-        ><br /><br />
-        <b-button
-          :disabled="pokazi3"
-          @click="izracunPrelaskaKilometaraPremNatocenomGorivu()"
-          >Izračun prelaska kilometara prema natočenim litrama goriva!</b-button
-        ><br /><br />
-        <b-button
-          :disabled="pokazi4"
-          @click="izracunPrelaskaKilometaraPremaNatocenomGorivuZaNovce()"
-          >Izračun prelaska kilometara prema natočenom gorivu za odredjene
-          novce!</b-button
-        >
-        <br /><br />
-        <b-button
-          :disabled="pokazi5"
-          @click="izracunPotrosnjeAutaPremaNatocenomGorivuZaNovce()"
-          >Izračun potrošnje auta prema natočenom gorivu za odredjene
-          novce!</b-button
-        >
-        <br /><br />
-        <b-button
-          :disabled="pokazi6"
-          @click="izracunPotrosnjeAutaPremaNatocenomGorivu()"
-          >Izračun potrošnje auta prema natočenim litrama goriva!</b-button
-        >
-      </b-col>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Izračun</th>
+            <th scope="col"></th>
+            <th scope="col">Legenda</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <b-button
+                :variant="boja1"
+                :disabled="pokazi1"
+                @click="izracunGorivaPremaKilometrima()"
+                >Izracun Goriva Prema Kilometrima!</b-button
+              >
+            </td>
+            <td></td>
+            <td>
+              <div class="plava"></div>
+              <div class="zelena"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>
+              <b-button
+                :variant="boja2"
+                :disabled="pokazi2"
+                @click="izracunCijeneGorivaPremaKilometrima()"
+                >Izracun Cijene Goriva Prema Kilometrima!</b-button
+              >
+            </td>
+            <td></td>
+            <td>
+              <div class="plava"></div>
+              <div class="zelena"></div>
+              <div class="narancasta"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">
+              <b-button
+                :variant="boja3"
+                :disabled="pokazi3"
+                @click="izracunPrelaskaKilometaraPremNatocenomGorivu()"
+                >Izračun prelaska kilometara prema natočenim litrama
+                goriva!</b-button
+              >
+            </td>
+            <td>
+              <div class="zelena"></div>
+              <div class="ljubicasta"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td colspan="2">
+              <b-button
+                :variant="boja4"
+                :disabled="pokazi4"
+                @click="izracunPrelaskaKilometaraPremaNatocenomGorivuZaNovce()"
+                >Izračun prelaska kilometara prema natočenom gorivu za odredjene
+                novce!</b-button
+              >
+            </td>
+            <td>
+              <div class="zelena"></div>
+              <div class="narancasta"></div>
+              <div class="siva"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td colspan="2">
+              <b-button
+                :variant="boja5"
+                :disabled="pokazi5"
+                @click="izracunPotrosnjeAutaPremaNatocenomGorivuZaNovce()"
+                >Izračun potrošnje auta prema natočenom gorivu za odredjene
+                novce!</b-button
+              >
+            </td>
+            <td>
+              <div class="plava"></div>
+              <div class="narancasta"></div>
+              <div class="siva"></div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td colspan="2">
+              <b-button
+                :variant="boja6"
+                :disabled="pokazi6"
+                @click="izracunPotrosnjeAutaPremaNatocenomGorivu()"
+                >Izračun potrošnje auta prema natočenim litrama
+                goriva!</b-button
+              >
+            </td>
+            <td>
+              <div class="plava"></div>
+              <div class="ljubicasta"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </b-row>
   </b-container>
 </template>
 
 <script>
 export default {
+  components: {},
   data() {
     return {
       predeniKm: "",
@@ -119,11 +199,18 @@ export default {
       pokazi4: true,
       pokazi5: true,
       pokazi6: true,
+      boja1: "danger",
+      boja2: "danger",
+      boja3: "danger",
+      boja4: "danger",
+      boja5: "danger",
+      boja6: "danger",
     };
   },
   methods: {
     otvori1() {
       if (this.predeniKm != false && this.potrosnjaAuta != false) {
+        this.boja1 = "success";
         return (this.pokazi1 = false);
       }
     },
@@ -133,11 +220,13 @@ export default {
         this.potrosnjaAuta != false &&
         this.cijenaGoriva != false
       ) {
+        this.boja2 = "success";
         return (this.pokazi2 = false);
       }
     },
     otvori3() {
       if (this.natocenoGorivo != false && this.potrosnjaAuta != false) {
+        this.boja3 = "success";
         return (this.pokazi3 = false);
       }
     },
@@ -147,6 +236,7 @@ export default {
         this.cijenaGoriva != false &&
         this.potrosnjaAuta != false
       ) {
+        this.boja4 = "success";
         return (this.pokazi4 = false);
       }
     },
@@ -156,30 +246,38 @@ export default {
         this.natocenoGorivoZaNovce != false &&
         this.predeniKm != false
       ) {
+        this.boja5 = "success";
         return (this.pokazi5 = false);
       }
     },
     otvori6() {
       if (this.predeniKm != false && this.natocenoGorivo != false) {
+        this.boja6 = "success";
         return (this.pokazi6 = false);
       }
     },
     sakrij1() {
+      this.boja1 = "danger";
       return (this.pokazi1 = true);
     },
     sakrij2() {
+      this.boja2 = "danger";
       return (this.pokazi2 = true);
     },
     sakrij3() {
+      this.boja3 = "danger";
       return (this.pokazi3 = true);
     },
     sakrij4() {
+      this.boja4 = "danger";
       return (this.pokazi4 = true);
     },
     sakrij5() {
+      this.boja5 = "danger";
       return (this.pokazi5 = true);
     },
     sakrij6() {
+      this.boja6 = "danger";
       return (this.pokazi6 = true);
     },
     izracunGorivaPremaKilometrima() {
@@ -307,3 +405,36 @@ export default {
   },
 };
 </script>
+
+<style>
+.plava {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #b4c2ff;
+}
+.zelena {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #d1ff66;
+}
+.narancasta {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #ffc14f;
+}
+.ljubicasta {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #f2a7fc;
+}
+.siva {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  background-color: #d3d3d3;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid>
-    <b-row class="my-4 col-8 mx-auto">
+  <b-container>
+    <b-row class="my-4 col-10 mx-auto">
       <b-col sm="3">
         <label>Predjeni kilomertri</label>
         <b-form-input
@@ -14,7 +14,6 @@
           aria-describedby="input-live-help input-live-feedback"
         ></b-form-input>
       </b-col>
-
       <b-col sm="2">
         <label>Potrošnja auta</label>
         <b-form-input
@@ -73,53 +72,63 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Izračun</th>
-            <th scope="col"></th>
+            <th scope="col">Rezultat</th>
             <th scope="col">Legenda</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
+          <tr class="align-middle">
+            <th scope="row"><h5>1</h5></th>
+            <td>
+              <h5>
+                Izracun Goriva Prema Kilometrima!
+              </h5>
+            </td>
             <td>
               <b-button
                 :variant="boja1"
                 :disabled="pokazi1"
                 @click="izracunGorivaPremaKilometrima()"
-                >Izracun Goriva Prema Kilometrima!</b-button
+                >Izračunaj!</b-button
               >
             </td>
-            <td></td>
             <td>
               <div class="plava"></div>
               <div class="zelena"></div>
             </td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
+          <tr class="align-middle">
+            <th scope="row"><h5>2</h5></th>
+            <td>
+              <h5>Izracun Cijene Goriva Prema Kilometrima!</h5>
+            </td>
             <td>
               <b-button
                 :variant="boja2"
                 :disabled="pokazi2"
                 @click="izracunCijeneGorivaPremaKilometrima()"
-                >Izracun Cijene Goriva Prema Kilometrima!</b-button
+                >Izračunaj!</b-button
               >
             </td>
-            <td></td>
             <td>
               <div class="plava"></div>
               <div class="zelena"></div>
               <div class="narancasta"></div>
             </td>
           </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">
+          <tr class="align-middle">
+            <th scope="row"><h5>3</h5></th>
+            <td>
+              <h5>
+                Izračun prelaska kilometara prema natočenim litrama goriva!
+              </h5>
+            </td>
+            <td>
               <b-button
                 :variant="boja3"
                 :disabled="pokazi3"
                 @click="izracunPrelaskaKilometaraPremNatocenomGorivu()"
-                >Izračun prelaska kilometara prema natočenim litrama
-                goriva!</b-button
+                >Izračunaj!</b-button
               >
             </td>
             <td>
@@ -127,15 +136,20 @@
               <div class="ljubicasta"></div>
             </td>
           </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td colspan="2">
+          <tr class="align-middle">
+            <th scope="row"><h5>4</h5></th>
+            <td>
+              <h5>
+                Izračun prelaska kilometara prema natočenom gorivu za odredjene
+                novce!
+              </h5>
+            </td>
+            <td>
               <b-button
                 :variant="boja4"
                 :disabled="pokazi4"
                 @click="izracunPrelaskaKilometaraPremaNatocenomGorivuZaNovce()"
-                >Izračun prelaska kilometara prema natočenom gorivu za odredjene
-                novce!</b-button
+                >Izračunaj!</b-button
               >
             </td>
             <td>
@@ -144,15 +158,20 @@
               <div class="siva"></div>
             </td>
           </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td colspan="2">
+          <tr class="align-middle">
+            <th scope="row"><h5>5</h5></th>
+            <td>
+              <h5>
+                Izračun potrošnje auta prema natočenom gorivu za odredjene
+                novce!
+              </h5>
+            </td>
+            <td>
               <b-button
                 :variant="boja5"
                 :disabled="pokazi5"
                 @click="izracunPotrosnjeAutaPremaNatocenomGorivuZaNovce()"
-                >Izračun potrošnje auta prema natočenom gorivu za odredjene
-                novce!</b-button
+                >Izračunaj!</b-button
               >
             </td>
             <td>
@@ -161,15 +180,17 @@
               <div class="siva"></div>
             </td>
           </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td colspan="2">
+          <tr class="align-middle">
+            <th scope="row"><h5>6</h5></th>
+            <td>
+              <h5>Izračun potrošnje auta prema natočenim litrama goriva!</h5>
+            </td>
+            <td>
               <b-button
                 :variant="boja6"
                 :disabled="pokazi6"
                 @click="izracunPotrosnjeAutaPremaNatocenomGorivu()"
-                >Izračun potrošnje auta prema natočenim litrama
-                goriva!</b-button
+                >Izračunaj!</b-button
               >
             </td>
             <td>
@@ -283,7 +304,7 @@ export default {
     izracunGorivaPremaKilometrima() {
       let rez;
       rez = (this.potrosnjaAuta / 100) * this.predeniKm;
-      alert(
+      this.$alert(
         "Kako bi prešli " +
           this.predeniKm +
           " Km potrebno Vam je " +
@@ -295,12 +316,12 @@ export default {
       let rez, a;
       a = (this.potrosnjaAuta / 100) * this.predeniKm;
       rez = a * this.cijenaGoriva;
-      alert("Cijena za unesene podatke iznosi " + rez.toFixed(2) + " Kn");
+      this.$alert("Cijena za unesene podatke iznosi " + rez.toFixed(2) + " Kn");
     },
     izracunPrelaskaKilometaraPremNatocenomGorivu() {
       let rez;
       rez = (100 / this.potrosnjaAuta) * this.natocenoGorivo;
-      alert(
+      this.$alert(
         "Sa " +
           this.natocenoGorivo +
           " l natočenog goriva se može prijeći " +
@@ -312,7 +333,7 @@ export default {
       let rez, a;
       a = (this.natocenoGorivoZaNovce / this.cijenaGoriva) * 100;
       rez = a / this.potrosnjaAuta;
-      alert(
+      this.$alert(
         "Sa " +
           this.natocenoGorivoZaNovce +
           " kn natočenog goriva možete prijeći " +
@@ -329,7 +350,7 @@ export default {
     izracunPotrosnjeAutaPremaNatocenomGorivu() {
       let rez;
       rez = (this.natocenoGorivo / this.predeniKm) * 100;
-      alert("Vaš auto troši " + rez.toFixed(2) + " l/100 km");
+      this.$alert("Vaš auto troši " + rez.toFixed(2) + " l/100 km");
     },
   },
   computed: {

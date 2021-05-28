@@ -1,9 +1,13 @@
 <template>
-  <div id="about"><stars-rating v-bind="config"></stars-rating></div>
+  <dir>
+    <div id="about"><stars-rating v-bind="config"></stars-rating></div>
+    <b-button @click="funk()">LOG</b-button>
+  </dir>
 </template>
 
 <script>
 import starsRating from "@/components/rating-stars";
+
 export default {
   name: "about",
   components: {
@@ -24,7 +28,11 @@ export default {
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    funk() {
+      this.$swal("alert!");
+    },
+  },
   created() {},
 };
 </script>

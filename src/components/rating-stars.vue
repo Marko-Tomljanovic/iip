@@ -74,7 +74,7 @@ export default {
       styleStarWidth: 100,
       styleStarHeight: 100,
       styleEmptyStarColor: "gray",
-      styleFullStarColor: "red",
+      styleFullStarColor: "goldenrod",
     };
   },
   directives: {},

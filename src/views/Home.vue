@@ -458,4 +458,9 @@ export default {
   height: 40px;
   background-color: #d3d3d3;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 </style>

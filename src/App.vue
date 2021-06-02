@@ -17,7 +17,6 @@
         </b-navbar>
       </div>
     </div>
-    <br />
     <router-view />
   </div>
 </template>

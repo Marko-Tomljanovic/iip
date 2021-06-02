@@ -4,7 +4,7 @@
       <b-col sm="3">
         <label>Predjeni kilomertri</label>
         <b-form-input
-          style="background-color: #b4c2ff;"
+          style="background-color: #b4c2ff; border:none"
           class="my-2"
           type="number"
           :state="nameState1"
@@ -17,7 +17,7 @@
       <b-col sm="2">
         <label>Potrošnja auta</label>
         <b-form-input
-          style="background-color: #d1ff66;"
+          style="background-color: #d1ff66;border:none"
           class="my-2"
           type="number"
           :state="nameState2"
@@ -30,7 +30,7 @@
       <b-col sm="2">
         <label>Cijena 1 goriva</label>
         <b-form-input
-          style="background-color: #ffc14f;"
+          style="background-color: #ffc14f;border:none"
           class="my-2"
           type="number"
           :state="nameState3"
@@ -43,7 +43,7 @@
       <b-col sm="2">
         <label>Natočeno goriva</label>
         <b-form-input
-          style="background-color: #f2a7fc;"
+          style="background-color: #f2a7fc;border:none"
           class="my-2"
           type="number"
           :state="nameState4"
@@ -56,7 +56,7 @@
       <b-col sm="3">
         <label>Natočeno goriva za novce</label>
         <b-form-input
-          style="background-color: #d3d3d3;"
+          style="background-color: #d3d3d3;border:none"
           class="my-2"
           type="number"
           :state="nameState5"
@@ -427,7 +427,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .plava {
   display: inline-block;
   width: 20px;

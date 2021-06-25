@@ -4,7 +4,8 @@
       <div>
         <b-navbar type="dark" variant="dark">
           <b-navbar-nav>
-            <b-nav-item to="/">Home</b-nav-item>
+            <b-nav-item to="/">Početna</b-nav-item>
+            <b-nav-item to="/forum">Forum</b-nav-item>
           </b-navbar-nav>
           <b-navbar-nav>
             <b-nav-item v-if="!store.trenutniKorisnik" to="/prijava">
@@ -56,4 +57,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+</style>

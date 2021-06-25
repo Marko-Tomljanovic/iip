@@ -16,6 +16,7 @@
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              @keyup.enter="prijava()"
             />
           </div>
           <div class="mb-3">
@@ -28,6 +29,7 @@
               type="password"
               class="form-control"
               id="exampleInputPassword1"
+              @keyup.enter="prijava()"
             />
           </div>
           <b-button type="button" @click="prijava()" class="btn btn-success">

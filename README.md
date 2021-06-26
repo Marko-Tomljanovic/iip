@@ -1,15 +1,15 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2e6190ff-14b3-4a7a-bac3-45fedbdaf94e/deploy-status)](https://app.netlify.com/sites/izrada-informatickih-projekata/deploys)
 
-# Naziv aplikacije: moram smisliti
+# Naziv aplikacije: Fuel-Info
 
-[moram smisliti](https://izrada-informatickih-projekata.netlify.app)  
+[moram smisliti](https://izrada-informatickih-projekata.netlify.app)
 
-Opis aplikacije 
+Opis aplikacije
 [opširnije](https://www.chargebee.com/)
 
 ### team members
 
-Marko Tomljanović <markot@windowslive.com>  
+Marko Tomljanović <markot@windowslive.com>
 
 ### purpose
 

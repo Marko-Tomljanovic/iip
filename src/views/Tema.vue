@@ -71,9 +71,9 @@ export default {
               komentar: dataK.komentar,
               naslov: dataK.naslov,
               korisnik: dataK.korisnik,
-              vrijemeObjaveKomentara: moment(dataK.vrijemeObjave).format(
-                "DD-MM-YYYY"
-              ),
+              vrijemeObjaveKomentara: moment(
+                dataK.vrijemeObjaveKomentara
+              ).format("DD-MM-YYYY"),
             });
           });
         });

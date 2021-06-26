@@ -1,10 +1,14 @@
 <template>
-  <dir>
+  <div class="container">
     <div class="card mx-auto mt-4" style="width: 45rem;">
-      <h4 class="mx-auto">Teme</h4>
+      <h4 class="mx-auto">Forum</h4>
     </div>
     <div class="card mx-auto mt-4" style="width: 45rem;">
-      <b-button style="color:white" to="/novaTema">NOVA TEMA</b-button>
+      <b-button
+        style="color:white; background-color:#3377ff; border:none"
+        to="/novaTema"
+        >NOVA TEMA</b-button
+      >
     </div>
 
     <tema
@@ -15,7 +19,7 @@
       :vrijeme="izv.vrijemeObjaveTeme"
       :opis="izv.opis"
     ></tema>
-  </dir>
+  </div>
 </template>
 
 <script>

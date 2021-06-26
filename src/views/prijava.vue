@@ -4,8 +4,9 @@
       <div class="col"></div>
       <div class="col-6">
         <form>
-          <div class="mb-3">
-            Prijavi se <br /><br />
+          <div class="mb-2 mt-4">
+            <h4>Prijavi se</h4>
+            <br />
             <label for="exampleInputEmail1" class="form-label"
               >Email adresa</label
             >

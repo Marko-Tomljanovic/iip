@@ -4,8 +4,9 @@
       <div class="col"></div>
       <div class="col-6">
         <form>
-          <div class="mb-3">
-            Registriraj se!<br /><br />
+          <div class="mb-3 mt-4">
+            <h4>Registriraj se!</h4>
+            <br />
             <label for="exampleInputEmail1" class="form-label"
               >Email adresa</label
             >
@@ -89,9 +90,9 @@ export default {
   methods: {
     registracija() {
       if (this.lozinka != this.plozinka) {
-        alert("Lozinke nisu iste!");
+        this.$alert("Lozinke nisu iste!");
       } else if (this.prihvati == false) {
-        alert("Potrebno je prihvatiti uvijete korištenja");
+        this.$alert("Potrebno je prihvatiti uvijete korištenja");
       } else {
         firebase
           .auth()

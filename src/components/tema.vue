@@ -1,6 +1,6 @@
 <template
   ><b-link :to="link">
-    <div class="card mt-3">
+    <div class="card mt-3" style="background-color: #e6eeff">
       <h6 style="margin-left:27px; margin-top: 18px" class="mb-0">
         {{ tema }}
       </h6>

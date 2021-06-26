@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h4 class="mx-auto col-4 mt-4 mb-4">{{ this.$route.params.id }}</h4>
     <komentar
       v-for="(izv, index) in karticaKomentari"
@@ -7,15 +7,20 @@
       :tema="izv.naslov"
       :vrijeme="izv.vrijemeObjaveKomentara"
       :komentar="izv.komentar"
+      :korisnik="izv.korisnik"
     ></komentar>
     <div v-if="!store.trenutniKorisnik" class="card mt-3">
       <h5 class="mx-auto">Prijavite se kako bi komentirali</h5>
     </div>
-    <div v-if="store.trenutniKorisnik" class="card mt-3">
+    <div
+      v-if="store.trenutniKorisnik"
+      class="card mt-3"
+      style="background-color:#e6eeff"
+    >
       <h6 class="mb-1 mt-3 px-4">
         {{ karticaKomentari.naslov }}
         <p class="float-right mt-1 text-secondary">
-          Ocjena
+          Post
         </p>
       </h6>
       <b-form-textarea
@@ -23,15 +28,15 @@
         class="col-11 mb-2 mx-auto text-secondary"
         id="textarea"
         v-model="komentar"
-        placeholder="Komentar"
+        placeholder="Upiši post.."
         rows="2"
         max-rows="7"
       ></b-form-textarea>
       <b-button
         class="btn col-11 mx-auto mb-3"
         @click="ucitajKomentar"
-        style="background-color: #2677a7; border-color:#2677a7"
-        >Učitaj</b-button
+        style="background-color: #3377ff; border-color:#2677a7"
+        >Objavi</b-button
       >
     </div>
   </div>
@@ -64,6 +69,8 @@ export default {
             const dataK = doc.data();
             this.karticaKomentari.push({
               komentar: dataK.komentar,
+              naslov: dataK.naslov,
+              korisnik: dataK.korisnik,
               vrijemeObjaveKomentara: moment(dataK.vrijemeObjave).format(
                 "DD-MM-YYYY"
               ),

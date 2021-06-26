@@ -3,7 +3,18 @@
     <div class="card mx-auto mt-4" style="width: 45rem;">
       <h4 class="mx-auto">Forum</h4>
     </div>
-    <div class="card mx-auto mt-4" style="width: 45rem;">
+    <div
+      v-if="!store.trenutniKorisnik"
+      class="card mx-auto mt-4"
+      style="width: 45rem;"
+    >
+      <h5 class="mx-auto">Prijavite se kako bi započeli temu!</h5>
+    </div>
+    <div
+      v-if="store.trenutniKorisnik"
+      class="card mx-auto mt-4"
+      style="width: 45rem;"
+    >
       <b-button
         style="color:white; background-color:#3377ff; border:none"
         to="/novaTema"
@@ -24,6 +35,7 @@
 
 <script>
 import { db } from "@/firebase";
+import store from "@/store";
 import tema from "@/components/tema";
 import moment from "moment";
 
@@ -34,6 +46,7 @@ export default {
   data() {
     return {
       kartica: [],
+      store,
     };
   },
   methods: {

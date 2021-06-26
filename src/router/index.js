@@ -40,6 +40,11 @@ const routes = [
     name: 'novaTema',
     component: () => import('../views/novaTema.vue')
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'error',
+    component: () => import('../components/error.vue')
+  }
 ]
 
 const router = new VueRouter({

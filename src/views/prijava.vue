@@ -52,10 +52,6 @@
             Nisi registriran?
             <b-link to="/Registracija">Registriraj se!</b-link>
           </p>
-          <p>
-            Zaboravljena lozinka?
-            <b-link to="/NovaLozinka">Zatraži novu lozinku</b-link>
-          </p>
         </form>
       </div>
       <div class="col"></div>

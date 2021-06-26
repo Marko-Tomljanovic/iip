@@ -15,7 +15,12 @@
       class="input-text js-input col-11 mt-5"
       type="text"
     />
-    <b-button class="mt-5" @click="ucitajTemu">Učitaj</b-button>
+    <b-button
+      style="background-color:#3377ff; border:none"
+      class="mt-5"
+      @click="ucitajTemu"
+      >Učitaj</b-button
+    >
   </div>
 </template>
 
@@ -44,6 +49,7 @@ export default {
           console.log("Spremljeno", doc);
           this.naslov = "";
           this.opis = "";
+          this.$router.replace("/Forum");
         })
         .catch((e) => {
           console.error(e);

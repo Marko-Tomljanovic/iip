@@ -2,7 +2,7 @@
 
 # Naziv aplikacije: Fuel-Info
 
-[moram smisliti](https://izrada-informatickih-projekata.netlify.app)
+[Fuel-Info](https://izrada-informatickih-projekata.netlify.app)
 
 Opis aplikacije
 [opširnije](https://www.chargebee.com/)

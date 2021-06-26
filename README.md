@@ -4,8 +4,6 @@
 
 [Fuel-Info](https://izrada-informatickih-projekata.netlify.app)
 
-Opis aplikacije
-[opširnije](https://www.chargebee.com/)
 
 ### team members
 
